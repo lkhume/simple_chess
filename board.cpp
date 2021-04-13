@@ -1,4 +1,4 @@
-#include "include/board.h"
+#include "include/Board.h"
 
 Board::Board()
 {
@@ -24,16 +24,28 @@ void Board::printBoard()
                 {
                     if (i%4 == 0)
                     {
-                        if (j % 8 > 4) cout << 'B';
+                        if (j % 8 > 4) cout << '#';
                         else cout << ' ';
                     }
                     else if (i%4 == 2)
                     {
                         if (j % 8 > 4) cout << ' ';
-                        else cout << 'B';
+                        else cout << '#';
                     }
                 }
-                else cout << "_";
+                else
+                {
+                    if (i%4 == 1)
+                    {
+                        if (j % 8 > 4) cout << '#';
+                        else cout << '_';
+                    }
+                    else if (i%4 == 3)
+                    {
+                        if (j % 8 > 4) cout << '_';
+                        else cout << '#';
+                    }
+                }
             }
             if (j == 32) cout << endl;
         }
