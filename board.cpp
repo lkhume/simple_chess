@@ -8,6 +8,7 @@ Board::Board()
     {
         board.push_back(row);
     }
+    board_change_mutex.lock();
 }
 
 Board::~Board() {}
